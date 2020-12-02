@@ -19,13 +19,14 @@ tic;
 blankvid = blankvid(:,:,:,1:20:end);
 disp(size(blankvid));
 mnshfvid = myMeanShiftSegmentation(blankvid,100,300,500,10,50,0.3);
-tok;
+toc;
 %% Display video
-dispvid = mnshfvid;
+dispvid = blankvid;
 for time = 1:size(dispvid,4)
     imshow(dispvid(:,:,:,time)./255)
     pause(2/vidObj.FrameRate);
 end
+% save(blankvid);
 %% Image of a Baboon
 %  Gaussian kernel bandwidth for the color feature : 300
 %  Gaussian kernel bandwidth for the spatial feature : 100
