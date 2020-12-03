@@ -4,9 +4,9 @@
 location = 'xylophone.mp4';
 save_inp_loc = '../data/in_x.mp4';
 save_loc = '../data/out_x.mp4';
-downsample_x = 1;
-downsample_y = 1;
-downsample_frame = 100;
+downsample_x = 2;
+downsample_y = 2;
+downsample_frame = 5;
 spatial_sigma = 100;
 intensity_sigma = 300;
 time_sigma = 500;

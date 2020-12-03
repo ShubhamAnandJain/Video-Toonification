@@ -9,7 +9,7 @@ coordscale=255/max([size(vid,2),size(vid,1)]);
 for time = 1:size(vid,4)
     for i = 1:size(vid,1)
         for j = 1:size(vid,2)
-            featurespace((time*size(vid,1)+(i-1))*size(vid,2)+j,:)=[coordscale*row(i,j)/sp_sig,coordscale*col(i,j)/sp_sig,vid(i,j,1,time)/col_sig,vid(i,j,2,time)/col_sig,vid(i,j,3,time)/col_sig,time/(time_sig*size(vid,4))];
+            featurespace(((time-1)*size(vid,1)+(i-1))*size(vid,2)+j,:)=[coordscale*row(i,j)/sp_sig,coordscale*col(i,j)/sp_sig,vid(i,j,1,time)/col_sig,vid(i,j,2,time)/col_sig,vid(i,j,3,time)/col_sig,time/(time_sig*size(vid,4))];
         end
     end
 end
@@ -31,7 +31,7 @@ end
 for time = 1:size(vid,4)
     for i = 1:size(vid,1)
         for j = 1:size(vid,2)
-            curr(i,j,:,time)=featurespace((time*size(vid,1)+(i-1))*size(vid,2)+j,3:5)*col_sig;
+            curr(i,j,:,time)=featurespace(((time-1)*size(vid,1)+(i-1))*size(vid,2)+j,3:5)*col_sig;
         end
     end
 end
