@@ -43,6 +43,8 @@ downsampled_vid = blankvid(:, :, :, 1:downsample_frame:end);
 mnshftvid = myMeanShiftSegmentation(downsampled_vid,spatial_sigma,intensity_sigma,time_sigma,num_iter,num_neighbor,lambda,windowsize,windowed,onlyy);
 disp("Mean Shift segmentation done");
 toc;
+%% Canny Edge Addition
+
 %% Save Input Video for later comparisons
 tic;
 inputVid = VideoWriter(save_inp_loc);
