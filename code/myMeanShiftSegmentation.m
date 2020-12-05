@@ -1,4 +1,4 @@
-function y = myMeanShiftSegmentation(vid,sp_sig,col_sig,time_sig,stopiter,numneighbour,lambda,windowsize,windowed,onlyy)
+ function y = myMeanShiftSegmentation(vid,sp_sig,col_sig,time_sig,stopiter,numneighbour,lambda,windowsize,windowed,onlyy)
 %Set XY coordinates
 coordscale=255/max([size(vid,2),size(vid,1)]);
 [row,col] = meshgrid(1:size(vid,2),1:size(vid,1));
